@@ -1,0 +1,359 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: helvetica;}
+
+html,body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #469fe2;
+background: -moz-radial-gradient(center, ellipse cover, #469fe2 0%, #074b99 100%);
+background: -webkit-gradient (radial, center center, 0px, center center, 100% color-stop(0%,#469fe2), color-stop(100%, #074b99));
+background: -webkit-radial-gradient(center, ellipse cover, #469fe2 0%, #074b99 100%);
+background: -o-radial-gradient(center, ellipse cover, #469fe2 0%, #074b99 100%);
+background: -ms-radial-gradient(center, ellipse cover, #469fe2 0%, #074b99 100%);
+background: radial-gradient(ellipse at center, #469fe2 0%, #074b99 100%);
+filter progid:DCImageTransform.Microsoft.gradient( startColorstr= '#469fe2', endColorstr= '#074b99', GradientType=1);}
+
+
+textarea#expresion{
+  font-size: 24px;
+  min-width: 500px;
+  max-width: 700px;
+  min-height: 200px;
+  max-height: 600px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 17px #404040;
+  color: white;
+}
+textarea#expresion:focus{
+  outline-style:none;}
+
+textarea#resultado{
+  font-size: 18px;
+  min-width: 500px;
+  max-width: 700px;
+  min-height: 200px;
+  max-height: 600px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 17px #404040;
+  color: white;}
+textarea#resultado:focus{
+  outline-style:none;}
+
+textarea#erro{
+  font-size: 18px;
+  min-width: 500px;
+  max-width: 700px;
+  min-height: 200px;
+  max-height: 600px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 17px #404040;
+  color: white;}
+textarea#erro:focus{
+  outline-style:none;}
+
+
+
+   .subir{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 165px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding-left: 40px;
+    border: 0.5px solid rgba(255,255,255,0.35);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .subir::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1;
+    transform: translateX(-170px) skew(30deg);
+    transition: 0.75s ease-in-out;
+  }
+
+  .subir:hover::after{
+    transform: translateX(170px) skew(30deg);
+  }
+
+
+  .subir:hover{
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+
+  .subir span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0055;
+    border-radius: 50%;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+
+  .subir:hover span{
+    left: calc(100% - 55px);
+    background-color: #fff;
+  }
+
+  .svg_subir{
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+  }
+  .subir:hover .svg_subir{
+    fill: #ff0055;
+  }
+
+
+  input#input_file{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+/* Boton Gurdar*/
+  .btn_descarga{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 200px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding-left: 40px;
+    border: 0.5px solid rgba(255,255,255,0.35);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .btn_descarga::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1;
+    transform: translateX(-170px) skew(30deg);
+    transition: 0.75s ease-in-out;
+  }
+
+  .btn_descarga:hover::after{
+    transform: translateX(170px) skew(30deg);
+  }
+
+
+  .btn_descarga:hover{
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+
+  .btn_descarga span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0055;
+    border-radius: 50%;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+
+  .btn_descarga:hover span{
+    left: calc(100% - 55px);
+    background-color: #fff;
+  }
+
+  .svg_des{
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+  }
+  .btn_descarga:hover .svg_des{
+    fill: #ff0055;
+  }
+
+
+
+/*Boton Analizar */
+
+
+.btn_captura{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  padding-left: 40px;
+  border: 0.5px solid rgba(255,255,255,0.35);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.btn_captura::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 1;
+  transform: translateX(-170px) skew(30deg);
+  transition: 0.75s ease-in-out;
+}
+
+.btn_captura:hover::after{
+  transform: translateX(170px) skew(30deg);
+}
+
+
+.btn_captura:hover{
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+
+.btn_captura span {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff0055;
+  border-radius: 50%;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.btn_captura:hover span{
+  left: calc(100% - 55px);
+  background-color: #fff;
+}
+
+.svg_cap{
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+}
+.btn_captura:hover .svg_cap{
+  fill: #ff0055;
+}
+
+
+/*Boton borrar pantalla */
+  .btn_borrar{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 200px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding-left: 40px;
+    border: 0.5px solid rgba(255,255,255,0.35);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .btn_borrar::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1;
+    transform: translateX(-170px) skew(30deg);
+    transition: 0.75s ease-in-out;
+  }
+
+  .btn_borrar:hover::after{
+    transform: translateX(170px) skew(30deg);
+  }
+
+
+  .btn_borrar:hover{
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+
+  .btn_borrar span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0055;
+    border-radius: 50%;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+
+  .btn_borrar:hover span{
+    left: calc(100% - 55px);
+    background-color: #fff;
+  }
+
+  .svg_borra{
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+  }
+  .btn_borrar:hover .svg_borra{
+    fill: #ff0055;
+  }

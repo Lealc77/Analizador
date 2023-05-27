@@ -1,0 +1,6 @@
+numeroa = 10
+numerob = 3
+
+suma = numeroa + numerob
+
+print ( suma )
